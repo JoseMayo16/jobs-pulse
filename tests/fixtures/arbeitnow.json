@@ -1,0 +1,11 @@
+{
+  "data": [
+    {"slug": "laravel-dev-berlin-1", "company_name": "Berlin Web GmbH", "title": "Laravel Developer (m/w/d)",
+     "description": "<p>PHP, Laravel, MySQL.</p>", "remote": true, "url": "https://www.arbeitnow.com/jobs/laravel-dev-berlin-1",
+     "tags": ["Software Development"], "job_types": [], "location": "Berlin", "created_at": 1791756036},
+    {"slug": "onsite-java-munich-2", "company_name": "Munich AG", "title": "Java Entwickler (m/w/d)",
+     "description": "<p>Java und Spring Boot.</p>", "remote": false, "url": "https://www.arbeitnow.com/jobs/onsite-java-munich-2",
+     "tags": [], "job_types": [], "location": "Munich", "created_at": 1791756036}
+  ],
+  "links": {"next": null}
+}

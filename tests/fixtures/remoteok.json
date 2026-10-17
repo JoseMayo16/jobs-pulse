@@ -1,0 +1,15 @@
+[
+  {"last_updated": 1791734403, "legal": "API Terms of Service: fixture"},
+  {"slug": "go-engineer-201", "id": "201", "epoch": "1791619208", "date": "2026-10-10T08:00:08+00:00",
+   "company": "Gopher Inc", "position": "Platform Engineer", "tags": ["golang", "kubernetes"],
+   "description": "<p>Build services in Go, deploy with Docker.</p>", "location": "Remote",
+   "salary_min": 90000, "salary_max": 130000, "url": "https://remoteok.com/remote-jobs/go-engineer-201"},
+  {"slug": "support-202", "id": "202", "epoch": "1791619000", "date": "2026-10-09T08:00:00+00:00",
+   "company": "Helpdesk", "position": "Customer Support Rep", "tags": ["support"],
+   "description": "<p>Answer tickets.</p>", "location": "", "salary_min": 0, "salary_max": 0,
+   "url": "https://remoteok.com/remote-jobs/support-202"},
+  {"slug": "backend-203", "id": "203", "epoch": "1791618000", "date": "2026-10-09T07:00:00+00:00",
+   "company": "Acme Labs", "position": "Senior Backend Engineer", "tags": ["python"],
+   "description": "<p>Python and Django.</p>", "location": "", "salary_min": 0, "salary_max": 0,
+   "url": "https://remoteok.com/remote-jobs/backend-203"}
+]

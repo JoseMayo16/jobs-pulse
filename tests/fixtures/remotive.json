@@ -1,0 +1,16 @@
+{
+  "0-legal-notice": "fixture",
+  "job-count": 3,
+  "jobs": [
+    {"id": 101, "url": "https://remotive.com/remote-jobs/software-dev/backend-101", "title": "Senior Backend Engineer",
+     "company_name": "Acme Labs ", "category": "Software Development", "tags": ["python", "django"],
+     "publication_date": "2026-10-08T21:47:32", "candidate_required_location": "Worldwide",
+     "description": "<p>We use <strong>Python</strong>, Django and PostgreSQL on AWS.</p>"},
+    {"id": 102, "url": "https://remotive.com/remote-jobs/sales/sales-102", "title": "Inside Sales Contractor",
+     "company_name": "Sellwell", "category": "Sales", "tags": ["CRM"], "publication_date": "2026-10-07T10:00:00",
+     "candidate_required_location": "USA", "description": "<p>Close deals over the phone.</p>"},
+    {"id": 103, "url": "https://remotive.com/remote-jobs/software-dev/frontend-103", "title": "Frontend Developer (Vue.js)",
+     "company_name": "Pixel Co", "category": "Software Development", "tags": [], "publication_date": "2026-10-06T09:00:00",
+     "candidate_required_location": "Europe", "description": "<p>Vue 3, TypeScript &amp; Tailwind.</p>"}
+  ]
+}
