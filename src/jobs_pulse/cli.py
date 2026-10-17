@@ -1,4 +1,4 @@
-"""Command line entry point.
+"""Command line entry point. Run it from the repository root.
 
 jobs-pulse run                 fetch boards + HN, merge, write the dashboard data
 jobs-pulse run --offline       rebuild the dashboard data from what is stored
@@ -17,10 +17,12 @@ from . import aggregate, store
 from .http import PoliteClient
 from .sources import BOARDS, hn
 
-ROOT = Path(__file__).resolve().parents[2]
-LISTINGS = ROOT / "data" / "listings.jsonl"
-HN_MONTHS = ROOT / "data" / "hn_months.json"
-SUMMARY = ROOT / "site" / "data" / "summary.json"
+# Data lives in the repository the command runs from: CI checks it out and runs
+# `jobs-pulse run` at its root. Deriving it from __file__ would point inside
+# site-packages once the package is installed, and the run would start empty.
+LISTINGS = Path("data") / "listings.jsonl"
+HN_MONTHS = Path("data") / "hn_months.json"
+SUMMARY = Path("site") / "data" / "summary.json"
 
 log = logging.getLogger("jobs_pulse")
 
@@ -67,7 +69,7 @@ def write_summary(listings, months, today) -> None:
         }
     )
     store.save_json(SUMMARY, aggregate.build(listings, months, sources, today), indent=None)
-    log.info("wrote %s", SUMMARY.relative_to(ROOT))
+    log.info("wrote %s", SUMMARY)
 
 
 def main(argv: list[str] | None = None) -> int:
