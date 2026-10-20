@@ -108,12 +108,31 @@
   }
 
   function tile(label, value, delta, extra) {
-    return el("div", { class: "tile" }, [
-      el("span", { class: "tile-label", text: label }),
-      el("span", { class: "tile-value", text: value }),
-      delta ? el("span", { class: "tile-delta", text: delta }) : null,
+    return el("div", { class: "figure" }, [
+      el("span", { class: "figure-value", text: value }),
+      el("span", { class: "figure-label", text: label }),
+      delta ? el("span", { class: "figure-note", text: delta }) : null,
       extra || null,
     ]);
+  }
+
+  // --- headline: the day's finding, written from the data ------------------------
+
+  function renderHeadline() {
+    var top = data.boards.skills;
+    if (!top.length) return;
+    $("headline").textContent = top[0].name + " appears in " + pct(top[0].share) + " of remote developer job posts";
+    var dek = [];
+    if (top.length > 2) {
+      dek.push(top[1].name + " and " + top[2].name + " follow, at " + pct(top[1].share) + " and " + pct(top[2].share)
+        + ", across " + data.boards.total.toLocaleString("en-US") + " listings from the last " + data.boards.window_days + " days.");
+    }
+    var mv = data.hn.movers;
+    if (mv && mv.rising.length && mv.falling.length) {
+      dek.push("In Hacker News hiring threads, " + mv.rising[0].name + " gained the most ground (" + pp(mv.rising[0].delta)
+        + ") and " + mv.falling[0].name + " lost the most (" + pp(mv.falling[0].delta) + ").");
+    }
+    $("dek").textContent = dek.join(" ");
   }
 
   function renderKpis() {
@@ -149,8 +168,10 @@
     var max = top.length ? top[0].share : 1;
     var labels = data.sources.filter(function (x) { return x.name !== "hn"; })
       .map(function (x) { return x.label; });
+    $("bars-title").textContent = "The " + top.length + " most requested technologies";
     $("bars-caption").textContent = "Share of the " + b.total + " remote developer listings seen in the last "
-      + b.window_days + " days on " + labels.slice(0, -1).join(", ") + " and " + labels.slice(-1) + ".";
+      + b.window_days + " days that mention each one.";
+    $("bars-source").textContent = "Source: " + labels.slice(0, -1).join(", ") + " and " + labels.slice(-1) + ".";
 
     $("bars").replaceChildren.apply($("bars"), top.map(function (k) {
       var bar = el("span", { class: "bar" });
@@ -395,6 +416,9 @@
     if (!mv) return;
     var rows = mv.rising.concat(mv.falling.slice().reverse());
     var range = function (keys) { return monthLabel(keys[0]).split(" ")[0] + "–" + monthLabel(keys[keys.length - 1]); };
+    if (mv.rising.length && mv.falling.length) {
+      $("movers-title").textContent = mv.rising[0].name + " is rising fastest; " + mv.falling[0].name + " is losing the most ground";
+    }
     $("movers-caption").textContent = "Change in the share of HN hiring posts that mention each technology, "
       + range(mv.now) + " vs " + range(mv.before) + ". Only technologies in at least 2% of posts.";
 
@@ -477,7 +501,7 @@
 
   function renderMeta() {
     var d = new Date(data.generated_at);
-    $("updated").textContent = "Updated " + d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    $("updated").textContent = d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
     var p = $("sources");
     p.replaceChildren(document.createTextNode("Data: "));
     data.sources.forEach(function (x, i) {
@@ -489,6 +513,7 @@
 
   function renderAll() {
     renderMeta();
+    renderHeadline();
     renderKpis();
     renderBars();
     if (data.hn.months.length) {
