@@ -1185,8 +1185,8 @@
   "thread_id": "49522897"
  },
  "2026-10": {
-  "posts": 262,
-  "remote": 146,
+  "posts": 261,
+  "remote": 145,
   "skills": {
    "AWS": 30,
    "Angular": 4,
@@ -1206,19 +1206,19 @@
    "Kafka": 4,
    "Kotlin": 4,
    "Kubernetes": 26,
-   "LLMs": 37,
+   "LLMs": 36,
    "Laravel": 1,
    "Machine Learning": 36,
    "MongoDB": 6,
    "MySQL": 3,
    "Next.js": 14,
-   "Node.js": 17,
+   "Node.js": 16,
    "PHP": 2,
    "PostgreSQL": 48,
    "PyTorch": 6,
    "Python": 62,
    "Rails": 5,
-   "React": 58,
+   "React": 57,
    "React Native": 8,
    "Redis": 5,
    "Ruby": 5,
@@ -1230,7 +1230,7 @@
    "Swift": 7,
    "Tailwind": 6,
    "Terraform": 15,
-   "TypeScript": 58,
+   "TypeScript": 57,
    "dbt": 1
   },
   "thread_id": "49922569"
