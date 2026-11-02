@@ -1234,5 +1234,27 @@
    "dbt": 1
   },
   "thread_id": "49922569"
+ },
+ "2026-11": {
+  "posts": 8,
+  "remote": 4,
+  "skills": {
+   "AWS": 1,
+   "Azure": 1,
+   "Docker": 2,
+   "GraphQL": 1,
+   "LLMs": 1,
+   "Laravel": 1,
+   "Machine Learning": 1,
+   "Next.js": 2,
+   "Node.js": 2,
+   "PHP": 1,
+   "PostgreSQL": 2,
+   "Python": 2,
+   "React": 2,
+   "Redis": 2,
+   "TypeScript": 3
+  },
+  "thread_id": "50338728"
  }
 }
