@@ -1236,10 +1236,10 @@
   "thread_id": "49922569"
  },
  "2026-11": {
-  "posts": 202,
-  "remote": 114,
+  "posts": 207,
+  "remote": 119,
   "skills": {
-   "AWS": 25,
+   "AWS": 26,
    "Angular": 2,
    "Azure": 4,
    "C#": 5,
@@ -1247,7 +1247,7 @@
    "Django": 3,
    "Docker": 10,
    "Elixir": 3,
-   "FastAPI": 3,
+   "FastAPI": 4,
    "GCP": 9,
    "Go": 9,
    "GraphQL": 5,
@@ -1257,17 +1257,17 @@
    "Kotlin": 2,
    "Kubernetes": 18,
    "LLMs": 22,
-   "Machine Learning": 26,
+   "Machine Learning": 27,
    "MongoDB": 4,
    "MySQL": 3,
-   "Next.js": 11,
+   "Next.js": 12,
    "Node.js": 11,
    "PHP": 3,
    "PostgreSQL": 28,
    "PyTorch": 8,
-   "Python": 47,
-   "Rails": 5,
-   "React": 38,
+   "Python": 49,
+   "Rails": 6,
+   "React": 42,
    "React Native": 7,
    "Redis": 5,
    "Ruby": 3,
@@ -1277,9 +1277,10 @@
    "Spring": 2,
    "Svelte": 1,
    "Swift": 3,
-   "Tailwind": 3,
+   "Tailwind": 4,
    "Terraform": 11,
-   "TypeScript": 37
+   "TypeScript": 39,
+   "Vue": 1
   },
   "thread_id": "50338728"
  }
