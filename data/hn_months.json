@@ -1236,8 +1236,8 @@
   "thread_id": "49922569"
  },
  "2026-11": {
-  "posts": 243,
-  "remote": 138,
+  "posts": 244,
+  "remote": 139,
   "skills": {
    "AWS": 32,
    "Angular": 2,
@@ -1265,7 +1265,7 @@
    "PHP": 3,
    "PostgreSQL": 35,
    "PyTorch": 10,
-   "Python": 60,
+   "Python": 61,
    "Rails": 6,
    "React": 50,
    "React Native": 7,
